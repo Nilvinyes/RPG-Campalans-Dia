@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController1 : MonoBehaviour
 {
     public Transform target;
     Camera cam;
@@ -17,6 +17,5 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
         Vector2 screenPos = cam.WorldToScreenPoint(target.position);
-        //Debug.Log(screenPos.x);
     }
 }

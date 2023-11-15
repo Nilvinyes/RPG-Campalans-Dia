@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class CartController : MonoBehaviour
 {
-    private Rigidbody2D cart;
-    public Camera mainCamera; // Drag and drop the main camera in the Inspector
-    public float margin = 0.1f; // Margin to consider when checking proximity to the edges
-    private bool edge = false;
+    private Rigidbody2D cart;   //Jugador
+    public Camera mainCamera;
+    public float margin = 0.1f; //Marge per controlar la distància amb les cantonades (equerra i dreta)
+    private bool edgeRight = false;
+    private bool edgeLeft = false;
+    public float speed;    //Veloccitat amb la que es mou el jugador
+    internal int puntuacioTotal;
+    public GameObject collectableBanana;
+    public GameObject collectableDuck;
 
+    private double timerCollectable = 1f;
+    private double timerCollectableDuck = 1.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,46 +28,55 @@ public class CartController : MonoBehaviour
     {
         float xMovement = Input.GetAxis("Horizontal");
 
-        if (!edge)
+        if(xMovement > 0 && !edgeLeft)
         {
-            if(xMovement > 0)
-            {
-                cart.velocity = Vector2.right * 5;
-            } else if (xMovement < 0)
-            {
-                cart.velocity = Vector2.left * 5;
-            }
-            else {
-                cart.velocity = Vector2.zero;
-            }
+            cart.velocity = Vector2.right * speed;
+        } else if (xMovement < 0 && !edgeRight)
+        {
+            cart.velocity = Vector2.left * speed;
+        }
+        else {
+            cart.velocity = Vector2.zero;
         }
     }
 
     void Update()
     {
-        if (mainCamera == null)
-        {
-            Debug.LogError("Main camera reference is not set!");
-            return;
-        }
+        timerCollectable -= Time.deltaTime;
+        timerCollectableDuck -= Time.deltaTime;
 
-        // Get the player's position in screen space
+        //Obtenim la posició del jugador en la pantalla
         Vector3 playerScreenPos = mainCamera.WorldToViewportPoint(transform.position);
 
-        // Check if the player is about to get off from the camera's view
-        if (playerScreenPos.x < margin || playerScreenPos.x > 1 - margin)
+        //Comprova quan el jugador està a punt de sortir de la càmara
+        if (playerScreenPos.x < margin) //El jugador està al marge dret de la càmera
         {
-            edge = true;
             cart.velocity = Vector2.zero;
-            // Player is about to get off from the camera's view
-            Debug.Log("Player is about to get off from the camera!");
+            edgeRight = true;
 
-            // You can add actions to keep the player inside the camera's view
-            // For example, you can move the player back inside the camera's view.
-            // Something like: transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), Mathf.Clamp(transform.position.y, minY, maxY), transform.position.z);
-        } else
+        } else if(playerScreenPos.x > 1 - margin)   //El jugador està al marge esquerra de la càmera
         {
-            edge = false;
+            cart.velocity = Vector2.zero;
+            edgeLeft = true;
+        }
+        else
+        {
+            edgeRight = false;
+            edgeLeft = false;
+        }
+
+        if (timerCollectable <= 0f)    //Collectable Banana
+        {
+            Instantiate(collectableBanana, new Vector3(Random.Range(-8, 8), 10 + transform.position.y, 0), Quaternion.identity);     //Instanciem el col·leccionable
+            timerCollectable = 1f;
+            //Debug.Log(puntuacioTotal);
+        }
+
+        if (timerCollectableDuck <= 0f)    //Collectable Duck
+        {
+            Instantiate(collectableDuck, new Vector3(Random.Range(-8, 8), 10 + transform.position.y, 0), Quaternion.identity);     //Instanciem el col·leccionable
+            timerCollectableDuck = 1.3f;
+            //Debug.Log(puntuacioTotal);
         }
     }
 }
