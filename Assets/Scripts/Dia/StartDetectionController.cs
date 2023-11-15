@@ -3,29 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class AbuelaController : MonoBehaviour
+public class StartDetectionController : MonoBehaviour
 {
-    public int requiredObjectsCount = 3;
-    private int collectedObjectsCount = 0;
-
-
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int linePosition;
-
-    public bool firstTime = true;
-
-    [SerializeField, TextArea(4, 6)]
-    private string[] dialogueLines1;
+    private bool automaticActivation = true;
 
     [SerializeField, TextArea(4, 6)]
-    private string[] dialogueLines2;
-
-    [SerializeField, TextArea(4, 6)]
-    private string[] dialogueLines3;
-
-
-    string[] actualDialogue;
+    private string[] dialogueLines;
 
     [SerializeField]
     private GameObject dialoguePanel;
@@ -35,29 +21,31 @@ public class AbuelaController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {              
-        actualDialogue = dialogueLines1;
+    {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
+        if ((isPlayerInRange && Input.GetKeyDown(KeyCode.F)) || (isPlayerInRange && automaticActivation))
         {
+            automaticActivation = false;
             if (!didDialogueStart)
             {
                 StartDialogue();
             }
-            else if (dialogueText.text == actualDialogue[linePosition])
+            else if (dialogueText.text == dialogueLines[linePosition])
             {
                 NextDialogue();
             }
             else
             {
                 StopAllCoroutines();
-                dialogueText.text = actualDialogue[linePosition];
+                dialogueText.text = dialogueLines[linePosition];                
             }
         }
+
     }
 
     private void StartDialogue()
@@ -65,7 +53,7 @@ public class AbuelaController : MonoBehaviour
 
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
-        linePosition = 0;       
+        linePosition = 0;
 
         PlayerController player = FindAnyObjectByType<PlayerController>();
         player.moveSpeed = 0;
@@ -76,7 +64,7 @@ public class AbuelaController : MonoBehaviour
     private void NextDialogue()
     {
         linePosition++;
-        if (linePosition < actualDialogue.Length)
+        if (linePosition < dialogueLines.Length)
         {
             StartCoroutine(ShowLine());
         }
@@ -87,6 +75,8 @@ public class AbuelaController : MonoBehaviour
 
             PlayerController player = FindAnyObjectByType<PlayerController>();
             player.moveSpeed = 5;
+            Destroy(gameObject);
+                       
         }
     }
 
@@ -94,32 +84,19 @@ public class AbuelaController : MonoBehaviour
     {
         dialogueText.text = "";
 
-        foreach (var character in actualDialogue[linePosition])
+        foreach (var character in dialogueLines[linePosition])
         {
             dialogueText.text += character;
             yield return new WaitForSeconds(0.05f);
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            if (firstTime)
-            {
-                actualDialogue = dialogueLines1;
-                firstTime = false;
-            }
-            else if(collectedObjectsCount == requiredObjectsCount) 
-            {
-                actualDialogue = dialogueLines3;
-            }
-            else
-            {
-                actualDialogue = dialogueLines2;
-            }
-           
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -128,15 +105,6 @@ public class AbuelaController : MonoBehaviour
         {
             isPlayerInRange = false;
         }
-    }
-
-
-    //________________________________________________________________________________________________
-    public void CollectObject()
-    {
-        collectedObjectsCount++;   
-        // Puedes agregar lógica adicional aquí según el tipo de objeto
-        // Por ejemplo, mostrar mensajes específicos para cada objeto.
     }
 
 

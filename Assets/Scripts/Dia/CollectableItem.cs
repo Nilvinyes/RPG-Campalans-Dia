@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CollectableItem : MonoBehaviour
 {
-    public string itemName;
+    DialogueController controller;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        controller = GetComponent<DialogueController>();
+
     }
 
     // Update is called once per frame
@@ -19,13 +21,15 @@ public class CollectableItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            AbuelaController objectes = FindObjectOfType<AbuelaController>();
+        AbuelaController objectes = FindObjectOfType<AbuelaController>();
 
+
+        if (collision.CompareTag("Player") && !objectes.firstTime && Input.GetKeyDown(KeyCode.F))
+        {    
+            controller.enabled = true;
             if (objectes != null)
             {
-                objectes.CollectObject(itemName);
+                objectes.CollectObject();
                 Destroy(gameObject);
             }
         }
