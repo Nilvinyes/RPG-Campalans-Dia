@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController1 : MonoBehaviour
+public class CameraControllerMiniGame : MonoBehaviour
 {
     public Transform target;
     Camera cam;

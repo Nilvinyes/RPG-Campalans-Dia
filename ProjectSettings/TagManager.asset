@@ -8,6 +8,8 @@ TagManager:
   - Final
   - CartLeft
   - CartRight
+  - Banana
+  - Duck
   layers:
   - Default
   - TransparentFX

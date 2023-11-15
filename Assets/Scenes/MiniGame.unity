@@ -225,7 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 61191616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbb527ea577f1b64a82eccddc2783ff1, type: 3}
+  m_Script: {fileID: 11500000, guid: b6913f57a0e96594e9622d7b94c336fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 523649846}
@@ -405,9 +405,8 @@ MonoBehaviour:
   mainCamera: {fileID: 61191618}
   margin: 0.1
   speed: 8
-  puntuacioTotal: 0
-  collectableBanana: {fileID: 3883361368171214045, guid: 012bb9d4290d4e84fb471956fa3ea488, type: 3}
-  collectableDuck: {fileID: 1365521916462766485, guid: cf5a603764d25dc4188fc71fea83f459, type: 3}
+  collectableBanana: {fileID: 4457069209601357115, guid: 6fa1d09f1149cad469d5ed9304a621b6, type: 3}
+  collectableDuck: {fileID: 2988899278615792137, guid: b085ce0820308574abe1cf6547dc32b3, type: 3}
 --- !u!1 &1325394005
 GameObject:
   m_ObjectHideFlags: 0
