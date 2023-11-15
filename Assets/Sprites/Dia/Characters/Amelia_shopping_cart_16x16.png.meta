@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90914bfba768abd419ee63ff53933f10
+      internalID: -1099842785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 7
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082c02ea6f4d15c4d955adc980e5f1cf
+      internalID: -1939029361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ad3fc138595784e8c02db2f2400523
+      internalID: 162806508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e9d7718f1be284fb874ea27f8e7ad0
+      internalID: -1684123847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 7
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4965ebc4941c04085c277295b65aa5
+      internalID: -1513811612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5b2af618c0f5048bc42351b743bd40
+      internalID: -247391308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85e7d68f4fd9ee4fa90c617089210c0
+      internalID: -144784200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3907308370a44c840a6cc1c0b0cf5cd9
+      internalID: 1562996315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_8
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2400605e55492b45bb78b6103cef27a
+      internalID: 1625046293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be04186a4be134a48bab868c3df57c0b
+      internalID: 448145576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_10
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffd1590e568bc04a930c3285185c412
+      internalID: -378135444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_11
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5617ba627436c4581016448a3889f8
+      internalID: -2014313160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_12
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ef726b6b31c0b448023037f7e725b5
+      internalID: 1863997916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_13
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 7
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d2b5ace85c258408792258376fc959
+      internalID: 1350187101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_14
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bed528f9dc39f4fad20d25514d7cd5
+      internalID: 132165064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_15
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1c99d12f0fc114ca85fec6000829ad
+      internalID: -1041880396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_16
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 7
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de276d38abf2d641b260f24c6a77375
+      internalID: -1401821457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_17
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 6
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f400f21d898a64b8424d1f835e3e7d
+      internalID: 2012369147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_18
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3964e47df5f7f44bc1ed44bc5e2b21
+      internalID: -450216443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_19
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df490e4362e935545bb57a7a9745ab92
+      internalID: -1756395017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87528c3429931754ca795211148d6f73
+      internalID: -1082773353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_21
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39048b2e8beaa284595bfa326051b439
+      internalID: 1284363544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_22
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f691f5796f3ba40bcea7626a422537
+      internalID: -832400410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amelia_shopping_cart_16x16_23
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc6c63f050b0604b9e7c455c067d91d
+      internalID: 1334301749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +649,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Amelia_shopping_cart_16x16_0: -1099842785
+      Amelia_shopping_cart_16x16_1: -1939029361
+      Amelia_shopping_cart_16x16_10: -378135444
+      Amelia_shopping_cart_16x16_11: -2014313160
+      Amelia_shopping_cart_16x16_12: 1863997916
+      Amelia_shopping_cart_16x16_13: 1350187101
+      Amelia_shopping_cart_16x16_14: 132165064
+      Amelia_shopping_cart_16x16_15: -1041880396
+      Amelia_shopping_cart_16x16_16: -1401821457
+      Amelia_shopping_cart_16x16_17: 2012369147
+      Amelia_shopping_cart_16x16_18: -450216443
+      Amelia_shopping_cart_16x16_19: -1756395017
+      Amelia_shopping_cart_16x16_2: 162806508
+      Amelia_shopping_cart_16x16_20: -1082773353
+      Amelia_shopping_cart_16x16_21: 1284363544
+      Amelia_shopping_cart_16x16_22: -832400410
+      Amelia_shopping_cart_16x16_23: 1334301749
+      Amelia_shopping_cart_16x16_3: -1684123847
+      Amelia_shopping_cart_16x16_4: -1513811612
+      Amelia_shopping_cart_16x16_5: -247391308
+      Amelia_shopping_cart_16x16_6: -144784200
+      Amelia_shopping_cart_16x16_7: 1562996315
+      Amelia_shopping_cart_16x16_8: 1625046293
+      Amelia_shopping_cart_16x16_9: 448145576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
