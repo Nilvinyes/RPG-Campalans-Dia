@@ -1360,7 +1360,6 @@ GameObject:
   - component: {fileID: 108967563}
   - component: {fileID: 108967565}
   - component: {fileID: 108967564}
-  - component: {fileID: 108967566}
   m_Layer: 0
   m_Name: Carn
   m_TagString: Untagged
@@ -1395,6 +1394,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71ac8ca0a937c94ab4f3a779aeba2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueLines:
+  - Has agafat un tros de carn
+  dialoguePanel: {fileID: 691921527}
+  dialogueText: {fileID: 1243261359}
 --- !u!61 &108967565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1440,22 +1443,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.124207, y: 1.6053419}
   m_EdgeRadius: 0
---- !u!114 &108967566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108967562}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c121d966a4bc31d48b99a27b80c52136, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueLines:
-  - Has agafat un tros de carn
-  dialoguePanel: {fileID: 691921527}
-  dialogueText: {fileID: 1243261359}
 --- !u!1 &195386676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1456,7 @@ GameObject:
   - component: {fileID: 195386677}
   - component: {fileID: 195386680}
   - component: {fileID: 195386681}
+  - component: {fileID: 195386682}
   m_Layer: 0
   m_Name: Abuela
   m_TagString: Untagged
@@ -1579,6 +1567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredObjectsCount: 3
   firstTime: 1
+  icon: {fileID: 2076390442}
   dialogueLines1:
   - Sisplau ajuda. Ja estic massa gran per anar a comprar, hem podries fer tu la
     compra?
@@ -1591,7 +1580,7 @@ MonoBehaviour:
   dialogueLines2:
   - Encara et falten aliments per recollir!
   dialogueLines3:
-  - "\xA1Has recollit todos els aliments! Gracias."
+  - "\xA1Has recollit todos els aliments! Gracias. \nAqui tens la moneda"
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
 --- !u!61 &195386681
@@ -1638,6 +1627,51 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1.414125}
+  m_EdgeRadius: 0
+--- !u!61 &195386682
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195386676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.29818118}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.3440014}
   m_EdgeRadius: 0
 --- !u!1 &292998806
 GameObject:
@@ -3742,6 +3776,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71ac8ca0a937c94ab4f3a779aeba2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueLines:
+  - Has agafat Llimones
+  dialoguePanel: {fileID: 691921527}
+  dialogueText: {fileID: 1243261359}
 --- !u!61 &475134748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10954,8 +10992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Donde co\xF1o dinde co\xF1o esta la cervesa"
-  - Hermano no tendras un eurillo por aqui no la verdad me vendria bien
+  - Donde mierdas donde mierdas esta la cervesa
+  - Hermano no tendras un eurillo por aqui no, la verdad me vendria bien
   - Cervesita cervesita donde estas
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
@@ -11016,6 +11054,7 @@ GameObject:
   - component: {fileID: 1191642112}
   - component: {fileID: 1191642111}
   - component: {fileID: 1191642114}
+  - component: {fileID: 1191642115}
   m_Layer: 0
   m_Name: Cleaner
   m_TagString: Untagged
@@ -11146,6 +11185,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.22}
   m_Size: {x: 1, y: 1.82}
   m_Direction: 0
+--- !u!114 &1191642115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191642110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c121d966a4bc31d48b99a27b80c52136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - Quita!!! No me pise lo fregao anda cojone, no me pagan lo suficiente para aguantar
+    a gente como tu
+  dialoguePanel: {fileID: 691921527}
+  dialogueText: {fileID: 1243261359}
 --- !u!1 &1243261357
 GameObject:
   m_ObjectHideFlags: 0
@@ -11436,7 +11492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4428319622632748, guid: 47d27d09e80314b5faddc932002f4306, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.73
+      value: 12.57
       objectReference: {fileID: 0}
     - target: {fileID: 4428319622632748, guid: 47d27d09e80314b5faddc932002f4306, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19099,6 +19155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71ac8ca0a937c94ab4f3a779aeba2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueLines:
+  - Has agafat unes galetes
+  dialoguePanel: {fileID: 691921527}
+  dialogueText: {fileID: 1243261359}
 --- !u!61 &1979415096
 BoxCollider2D:
   m_ObjectHideFlags: 0
