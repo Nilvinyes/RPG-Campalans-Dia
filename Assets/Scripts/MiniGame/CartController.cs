@@ -52,6 +52,7 @@ public class CartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         cart = GetComponent<Rigidbody2D>();
         secondsCount = totalTime;
     }

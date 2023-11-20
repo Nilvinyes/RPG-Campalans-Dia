@@ -12,7 +12,8 @@ public class ButtonController : MonoBehaviour
 
     public void Restart()
     {
+        //SceneManager.GetSceneByName("MiniGame");   //Reiniciar el joc
+        SceneManager.LoadScene(1);
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);      //Reiniciar el joc
     }
 }
