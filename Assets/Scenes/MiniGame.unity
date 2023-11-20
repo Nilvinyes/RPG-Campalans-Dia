@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 268264845}
   - component: {fileID: 268264844}
   - component: {fileID: 268264843}
+  - component: {fileID: 268264846}
   m_Layer: 5
   m_Name: TornarBtn
   m_TagString: Untagged
@@ -311,7 +312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 268264844}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268264846}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: Tornar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &268264844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +363,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268264841}
   m_CullTransparentMesh: 1
+--- !u!114 &268264846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268264841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3ac023f7fe0d9429c5cccc0757fbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &463832804
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +715,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000052452087, y: 0}
-  m_SizeDelta: {x: 621.8778, y: 364.8966}
+  m_SizeDelta: {x: 621.8778, y: 400.5421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587461862
 MonoBehaviour:
@@ -1118,7 +1143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.7229, y: -28.157}
+  m_AnchoredPosition: {x: -1.5278, y: 0.000013351}
   m_SizeDelta: {x: 618.8223, y: 56.3139}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376482918
@@ -1230,6 +1255,7 @@ GameObject:
   - component: {fileID: 1386537220}
   - component: {fileID: 1386537219}
   - component: {fileID: 1386537218}
+  - component: {fileID: 1386537221}
   m_Layer: 5
   m_Name: ReiniciarBtn
   m_TagString: Untagged
@@ -1300,7 +1326,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1386537219}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386537221}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1386537219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1377,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386537216}
   m_CullTransparentMesh: 1
+--- !u!114 &1386537221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386537216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3ac023f7fe0d9429c5cccc0757fbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1483285407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 89.198}
+  m_AnchoredPosition: {x: 0, y: 120.109985}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499406671
@@ -1996,7 +2046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000047684, y: 89.198}
+  m_AnchoredPosition: {x: 0.00000047684, y: 120.11}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841243355
@@ -2355,7 +2405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28.157013}
+  m_AnchoredPosition: {x: 0, y: -1.075}
   m_SizeDelta: {x: 541.343, y: 196.5361}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078322628
