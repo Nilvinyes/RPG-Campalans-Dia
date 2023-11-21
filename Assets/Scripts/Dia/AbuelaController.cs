@@ -168,10 +168,8 @@ public class AbuelaController : MonoBehaviour
             {
                 Debug.Log(firstTime);
                 Debug.Log(collectedObjectsCount);
-                actualDialogue = dialogueLines2;
-                
-            }
-           
+                actualDialogue = dialogueLines2;                
+            }           
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -189,6 +187,4 @@ public class AbuelaController : MonoBehaviour
         collectedObjectsCount++;   
        
     }
-
-
 }
