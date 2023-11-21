@@ -36,6 +36,18 @@ public class AbuelaController : MonoBehaviour
     [SerializeField]
     private TMP_Text dialogueText;
 
+    [SerializeField]
+    private GameObject textMenjar;
+
+    [SerializeField]
+    private TextMeshProUGUI monedes;
+
+    [SerializeField]
+    private GameObject deteccioPlatan;
+
+    [SerializeField]
+    private GameObject coin;
+
     // Start is called before the first frame update
     void Start()
     {              
@@ -58,7 +70,7 @@ public class AbuelaController : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                dialogueText.text = actualDialogue[linePosition];
+                dialogueText.text = actualDialogue[linePosition];          
             }
         }
     }
@@ -84,12 +96,13 @@ public class AbuelaController : MonoBehaviour
             StartCoroutine(ShowLine());
         }
         else
-        {
+        {           
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
 
             PlayerController player = FindAnyObjectByType<PlayerController>();
             player.moveSpeed = 5;
+            GestionarCanvas();           
         }
     }
 
@@ -104,6 +117,31 @@ public class AbuelaController : MonoBehaviour
         }
     }
 
+
+    private void GestionarCanvas()
+    {
+        if (collectedObjectsCount == requiredObjectsCount)
+        {
+            icon.SetActive(false);
+            textMenjar.SetActive(false);
+            monedes.text = "2";
+            deteccioPlatan.SetActive(true);
+            StartCoroutine(Coin());
+        }
+        else if (!firstTime)
+        {
+            textMenjar.SetActive(true);
+
+        }
+    }
+
+    private IEnumerator Coin()
+    {
+        coin.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        coin.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -114,13 +152,13 @@ public class AbuelaController : MonoBehaviour
                 Debug.Log(firstTime);
                 actualDialogue = dialogueLines1;
                 firstTime = false;
+
             }
             else if(collectedObjectsCount == requiredObjectsCount) 
             {
                 Debug.Log(firstTime);
                 Debug.Log(collectedObjectsCount);
                 actualDialogue = dialogueLines3;
-                icon.SetActive(false);
             }
             else
             {
@@ -145,8 +183,7 @@ public class AbuelaController : MonoBehaviour
     public void CollectObject()
     {
         collectedObjectsCount++;   
-        // Puedes agregar lógica adicional aquí según el tipo de objeto
-        // Por ejemplo, mostrar mensajes específicos para cada objeto.
+       
     }
 
 

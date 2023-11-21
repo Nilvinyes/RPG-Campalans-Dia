@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
+    PlayerController playerController;
+    private void Start()
+    {
+        playerController = FindObjectOfType<PlayerController>();
+    }
     public void Tornar()
     {
-        
+        //string lastArea = playerController.GetLastArea();
+        //Debug.Log(lastArea);
+        //SceneManager.LoadScene(lastArea);
+        SceneManager.LoadScene(1);
     }
 
     public void Restart()

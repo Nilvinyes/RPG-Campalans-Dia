@@ -1,16 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CollectableItem : MonoBehaviour
+public class BananaDetection : MonoBehaviour
 {
-
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int linePosition;
-  
+    private bool automaticActivation = true;
 
     [SerializeField, TextArea(4, 6)]
     private string[] dialogueLines;
@@ -21,29 +19,21 @@ public class CollectableItem : MonoBehaviour
     [SerializeField]
     private TMP_Text dialogueText;
 
-
     [SerializeField]
-    private TextMeshProUGUI carn;
-
-    [SerializeField]
-    private TextMeshProUGUI galetes;
-
-    [SerializeField]
-    private TextMeshProUGUI llimones;
-
+    private GameObject estanteria;
 
     // Start is called before the first frame update
     void Start()
-    {      
+    {
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        AbuelaController objectes = FindObjectOfType<AbuelaController>();
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F) && !objectes.firstTime)
+        if ((isPlayerInRange && Input.GetKeyDown(KeyCode.F)) || (isPlayerInRange && automaticActivation))
         {
+            automaticActivation = false;
             if (!didDialogueStart)
             {
                 StartDialogue();
@@ -58,7 +48,7 @@ public class CollectableItem : MonoBehaviour
                 dialogueText.text = dialogueLines[linePosition];
             }
         }
-     
+
     }
 
     private void StartDialogue()
@@ -88,9 +78,9 @@ public class CollectableItem : MonoBehaviour
 
             PlayerController player = FindAnyObjectByType<PlayerController>();
             player.moveSpeed = 5;
-
-            AlimentRecollit();
+            estanteria.SetActive(true);
             Destroy(gameObject);
+
         }
     }
 
@@ -105,37 +95,13 @@ public class CollectableItem : MonoBehaviour
         }
     }
 
-    private void AlimentRecollit()
-    {
-        if (gameObject.name == "Carn")
-        {
-            carn.color = Color.green;
-        }
-        else if (gameObject.name == "Galetes")
-        {
-            galetes.color = Color.green;
-        }
-        else if (gameObject.name == "Llimones")
-        {
-            llimones.color = Color.green;
-        }
-    }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        AbuelaController objectes = FindObjectOfType<AbuelaController>();
-        isPlayerInRange = true;
-        if (collision.CompareTag("Player") && !objectes.firstTime)
+        if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-
-            if (objectes != null)
-            {
-                objectes.CollectObject();
-            }
         }
-
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -144,6 +110,5 @@ public class CollectableItem : MonoBehaviour
             isPlayerInRange = false;
         }
     }
-
 
 }

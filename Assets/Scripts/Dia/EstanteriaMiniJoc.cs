@@ -1,16 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CollectableItem : MonoBehaviour
+public class EstanteriaMiniJoc : MonoBehaviour
 {
-
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int linePosition;
-  
 
     [SerializeField, TextArea(4, 6)]
     private string[] dialogueLines;
@@ -21,28 +19,21 @@ public class CollectableItem : MonoBehaviour
     [SerializeField]
     private TMP_Text dialogueText;
 
-
-    [SerializeField]
-    private TextMeshProUGUI carn;
-
-    [SerializeField]
-    private TextMeshProUGUI galetes;
-
-    [SerializeField]
-    private TextMeshProUGUI llimones;
-
+    PlayerController player;
 
     // Start is called before the first frame update
     void Start()
-    {      
+    {
+        player = FindAnyObjectByType<PlayerController>();
+        player.moveSpeed = 5;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        AbuelaController objectes = FindObjectOfType<AbuelaController>();
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F) && !objectes.firstTime)
+        if ((isPlayerInRange && Input.GetKeyDown(KeyCode.F)))
         {
             if (!didDialogueStart)
             {
@@ -58,7 +49,7 @@ public class CollectableItem : MonoBehaviour
                 dialogueText.text = dialogueLines[linePosition];
             }
         }
-     
+
     }
 
     private void StartDialogue()
@@ -68,7 +59,6 @@ public class CollectableItem : MonoBehaviour
         dialoguePanel.SetActive(true);
         linePosition = 0;
 
-        PlayerController player = FindAnyObjectByType<PlayerController>();
         player.moveSpeed = 0;
 
         StartCoroutine(ShowLine());
@@ -86,11 +76,15 @@ public class CollectableItem : MonoBehaviour
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
 
-            PlayerController player = FindAnyObjectByType<PlayerController>();
+            
             player.moveSpeed = 5;
 
-            AlimentRecollit();
-            Destroy(gameObject);
+            //guardem al jugador el punt on el voldrem posar
+            //player.SetLastArea(SceneManager.GetActiveScene().name);
+
+            //carreguem l'escena
+            SceneManager.LoadScene(2);
+
         }
     }
 
@@ -105,37 +99,13 @@ public class CollectableItem : MonoBehaviour
         }
     }
 
-    private void AlimentRecollit()
-    {
-        if (gameObject.name == "Carn")
-        {
-            carn.color = Color.green;
-        }
-        else if (gameObject.name == "Galetes")
-        {
-            galetes.color = Color.green;
-        }
-        else if (gameObject.name == "Llimones")
-        {
-            llimones.color = Color.green;
-        }
-    }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        AbuelaController objectes = FindObjectOfType<AbuelaController>();
-        isPlayerInRange = true;
-        if (collision.CompareTag("Player") && !objectes.firstTime)
+        if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-
-            if (objectes != null)
-            {
-                objectes.CollectObject();
-            }
         }
-
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -144,6 +114,4 @@ public class CollectableItem : MonoBehaviour
             isPlayerInRange = false;
         }
     }
-
-
 }
