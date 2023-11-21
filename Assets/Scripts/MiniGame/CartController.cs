@@ -37,6 +37,8 @@ public class CartController : MonoBehaviour
     [SerializeField]
     GameObject btnComencar;
 
+    PlayerController playerController;
+
     private Rigidbody2D cart;   //Jugador
     public Camera mainCamera;
     public float margin = 0.1f; //Marge per controlar la distància amb les cantonades (equerra i dreta)
@@ -60,6 +62,9 @@ public class CartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>();
+        playerController.gameObject.SetActive(false);
+
         Time.timeScale = 0;
 
         panelMsgFinal.SetActive(true);

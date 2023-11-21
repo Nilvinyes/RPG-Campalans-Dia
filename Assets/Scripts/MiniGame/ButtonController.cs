@@ -20,6 +20,7 @@ public class ButtonController : MonoBehaviour
         //Debug.Log(lastArea);
         //SceneManager.LoadScene(lastArea);
         SceneManager.LoadScene(1);
+        playerController.gameObject.SetActive(true);
     }
 
     public void Restart()

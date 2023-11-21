@@ -22736,7 +22736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Mira este meme
+  - "\xA1Mira este meme!"
   dialoguePanel: {fileID: 1289447801}
   dialogueText: {fileID: 1896950607}
 --- !u!1 &562351604
@@ -23152,7 +23152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Hola
+  - Avui fa un molt bon dia!
   dialoguePanel: {fileID: 1289447801}
   dialogueText: {fileID: 1896950607}
 --- !u!212 &1772802898

@@ -40,6 +40,9 @@ public class AbuelaController : MonoBehaviour
     private GameObject textMenjar;
 
     [SerializeField]
+    private GameObject panelMenjar;
+
+    [SerializeField]
     private TextMeshProUGUI monedes;
 
     [SerializeField]
@@ -124,6 +127,7 @@ public class AbuelaController : MonoBehaviour
         {
             icon.SetActive(false);
             textMenjar.SetActive(false);
+            panelMenjar.SetActive(false);
             monedes.text = "2";
             deteccioPlatan.SetActive(true);
             StartCoroutine(Coin());
@@ -131,7 +135,7 @@ public class AbuelaController : MonoBehaviour
         else if (!firstTime)
         {
             textMenjar.SetActive(true);
-
+            panelMenjar.SetActive(true);
         }
     }
 

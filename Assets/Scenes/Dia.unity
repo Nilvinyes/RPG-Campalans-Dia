@@ -123,6 +123,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8661127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8661128}
+  - component: {fileID: 8661130}
+  - component: {fileID: 8661129}
+  m_Layer: 5
+  m_Name: PanelMonedes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8661128
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8661127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 924367703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 248.9294, y: 149.3441}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &8661129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8661127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 0.78431374}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &8661130
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8661127}
+  m_CullTransparentMesh: 1
 --- !u!1 &13428532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: 79}
+  m_AnchoredPosition: {x: -97, y: 95.356}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184162389
@@ -1733,21 +1808,22 @@ MonoBehaviour:
   firstTime: 1
   icon: {fileID: 2076390442}
   dialogueLines1:
-  - Sisplau ajuda. Ja estic massa gran per anar a comprar, hem podries fer tu la
-    compra?
-  - Merci, ets la primera persona que m'ajuda, ara tots els joves amb el FORNIT o
-    amb el Tiktok
-  - 'En els meus temps tenies que plantar i cultivar el teu propi menjar, sota el
-    sol i l''hort a 3Km de casa teva. '
-  - "Perd\xF3 que em desv\xEDo. Em podries anar a buscar Carn, Galetes i Llimones?
-    Si m'ho portes et donar\xE8 una moneda"
+  - Si us plau, ajuda'm! Ja estic massa gran per anar a comprar, em podries fer tu
+    la compra?
+  - "Moltes gr\xE0cies noiet, ets la primera persona que m'ajuda. Ara tots els joves
+    estan amb el FORNITE o amb el TikTok."
+  - En els meus temps havies de plantar i cultivar el teu propi menjar, sota el sol
+    i l'hort a 3 Km de casa teva...
+  - "Perd\xF3 que em desvio. Em podries anar a buscar CARN, GALETES i LLIMONES? Si
+    m'ho portes et donar\xE9 una moneda."
   dialogueLines2:
   - Encara et falten aliments per recollir!
   dialogueLines3:
-  - "\xA1Has recollit todos els aliments! Gracias. \nAqui tens la moneda"
+  - "Has recollit tots els aliments! Gr\xE0cies. \nAqu\xED tens la moneda."
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
   textMenjar: {fileID: 1151173547}
+  panelMenjar: {fileID: 1054174517}
   monedes: {fileID: 2007454902}
   deteccioPlatan: {fileID: 1771699045}
   coin: {fileID: 0}
@@ -1887,8 +1963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Andavant
-  - "15 PL\xC0TANS!!! si que tenies gana"
+  - "Que passi el seg\xFCent si us plau!"
+  - "Mare meva 15 pl\xE0tans! S\xED que tenies gana."
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
   bananas: {fileID: 1426684039}
@@ -4546,9 +4622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'COM QUE 3 EUROS PER UNA BARRA DE PAAA?!!
-
-    Com va el pais'
+  - "Com que 3 euros per una barra de pa!!! Com va el pa\xEDs..."
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
 --- !u!1 &603831023
@@ -7367,7 +7441,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 691921528}
+  - {fileID: 1054174518}
   - {fileID: 1151173548}
+  - {fileID: 8661128}
   - {fileID: 1048753514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11389,6 +11465,81 @@ RectTransform:
   m_AnchoredPosition: {x: 252.04596, y: -168.55585}
   m_SizeDelta: {x: 504.0919, y: 337.1117}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1054174517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054174518}
+  - component: {fileID: 1054174520}
+  - component: {fileID: 1054174519}
+  m_Layer: 5
+  m_Name: PanelMenjar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1054174518
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054174517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 924367703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 499.2334, y: 323.15228}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1054174519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054174517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 0.627451}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1054174520
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054174517}
+  m_CullTransparentMesh: 1
 --- !u!1 &1082809481
 GameObject:
   m_ObjectHideFlags: 0
@@ -11546,9 +11697,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Donde mierdas donde mierdas esta la cervesa
-  - Hermano no tendras un eurillo por aqui no, la verdad me vendria bien
-  - Cervesita cervesita donde estas
+  - "\xBFDonde rayos, donde rayos est\xE1 la bebida?"
+  - "\xBFHermano, no tendr\xE1s un eurillo por ah\xED no? La verdad me vendr\xEDa
+    bien."
+  - "Donde estar\xE1 la bebida..."
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
 --- !u!61 &1082809487
@@ -11791,8 +11943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Quita!!! No me pise lo fregao anda cojone, no me pagan lo suficiente para aguantar
-    a gente como tu
+  - Vigila noi! Fa tot el dia que netejo i tothom em trepitja el terra moll...
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
 --- !u!61 &1191642116
@@ -12492,8 +12643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Una vegada que proves els iogurt griegos, els altres no valen res. Creu-me soc
-    doctora
+  - Una vegada que proves els iogurts griegos, els altres no valen res. Creu-me soc
+    doctora.
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
 --- !u!61 &1561876465
@@ -20306,8 +20457,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - No arribo, tu senyor no em pots passar una galeta
-  - Porfa no li diguis a la meva mare, que com s'enteri no hem deixa jugar al Roblox
+  - No arribo a l'estanteria... Senyor em podries passar una galeta?
+  - "Porfa no li diguis a la meva mare, que com se n'adoni no hem deixar\xE0 jugar
+    al Roblox."
   dialoguePanel: {fileID: 691921527}
   dialogueText: {fileID: 1243261359}
 --- !u!1 &1979415093
@@ -20489,11 +20641,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1048753514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 94}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 66, y: -32}
+  m_SizeDelta: {x: 44.7491, y: 82.4001}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &2007454902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20541,15 +20693,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
