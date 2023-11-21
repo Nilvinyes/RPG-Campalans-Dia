@@ -44,8 +44,10 @@ public class CartController : MonoBehaviour
     public float margin = 0.1f; //Marge per controlar la distància amb les cantonades (equerra i dreta)
     private bool edgeRight = false;
     private bool edgeLeft = false;
-    public float speed;    //Veloccitat amb la que es mou el jugador
+    public float speed;    //Velocitat amb la que es mou el jugador    
     public int puntuacioTotal;
+    [SerializeField]
+    public int total = 15;  //Puntuació total per acabar el joc
     public GameObject collectableBanana;
     public GameObject collectableDuck;
 
@@ -145,7 +147,7 @@ public class CartController : MonoBehaviour
             btnReiniciar.gameObject.SetActive(true);
         }
 
-        if (puntuacioTotal == 15 && !timerZero)   //Has acabat el joc (15 punts)
+        if (puntuacioTotal == total && !timerZero)   //Has acabat el joc (15 punts)
         {
             Time.timeScale = 0;
             panelFinal.SetActive(true);
