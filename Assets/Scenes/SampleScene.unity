@@ -30381,7 +30381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - asda
+  - Tu esto no arranca
   dialoguePanel: {fileID: 1289447801}
   dialogueText: {fileID: 1896950607}
 --- !u!61 &2128636829
