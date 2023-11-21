@@ -819,6 +819,7 @@ MonoBehaviour:
   margin: 0.1
   speed: 8
   puntuacioTotal: 0
+  total: 15
   collectableBanana: {fileID: 4457069209601357115, guid: 6fa1d09f1149cad469d5ed9304a621b6, type: 3}
   collectableDuck: {fileID: 2988899278615792137, guid: b085ce0820308574abe1cf6547dc32b3, type: 3}
   totalTime: 30
