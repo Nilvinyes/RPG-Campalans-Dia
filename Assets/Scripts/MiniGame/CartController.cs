@@ -28,6 +28,14 @@ public class CartController : MonoBehaviour
     GameObject btnTornar;
     [SerializeField]
     GameObject btnReiniciar;
+    [SerializeField]
+    TextMeshProUGUI msgInici;
+    [SerializeField]
+    TextMeshProUGUI msgTecles;
+    [SerializeField]
+    Image teclesImg;
+    [SerializeField]
+    GameObject btnComencar;
 
     private Rigidbody2D cart;   //Jugador
     public Camera mainCamera;
@@ -52,7 +60,14 @@ public class CartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
+
+        panelMsgFinal.SetActive(true);
+        msgInici.gameObject.SetActive(true);
+        msgTecles.gameObject.SetActive(true);
+        teclesImg.gameObject.SetActive(true);
+        btnComencar.SetActive(true);
+
         cart = GetComponent<Rigidbody2D>();
         secondsCount = totalTime;
     }
@@ -155,5 +170,16 @@ public class CartController : MonoBehaviour
         int seconds = Mathf.FloorToInt(secondsCount);
 
         timerText.text = string.Format("{00:00}", seconds);
+    }
+
+    public void comencar()
+    {
+        msgInici.gameObject.SetActive(false);
+        msgTecles.gameObject.SetActive(false);
+        teclesImg.gameObject.SetActive(false);
+        btnComencar.SetActive(false);
+        panelMsgFinal.SetActive(false);
+
+        Time.timeScale = 1;
     }
 }

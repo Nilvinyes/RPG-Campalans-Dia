@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
+    private CartController cartController;
     PlayerController playerController;
+
     private void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        cartController = GameObject.FindObjectOfType<CartController>();
     }
+
     public void Tornar()
     {
         //string lastArea = playerController.GetLastArea();
@@ -21,7 +25,12 @@ public class ButtonController : MonoBehaviour
     public void Restart()
     {
         //SceneManager.GetSceneByName("MiniGame");   //Reiniciar el joc
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         Time.timeScale = 1;
+    }
+
+    public void Comencar()
+    {
+        cartController.comencar();
     }
 }
