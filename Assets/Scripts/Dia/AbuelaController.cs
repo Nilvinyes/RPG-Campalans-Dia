@@ -159,21 +159,16 @@ public class AbuelaController : MonoBehaviour
             isPlayerInRange = true;
             if (firstTime)
             {
-                Debug.Log(firstTime);
                 actualDialogue = dialogueLines1;
                 firstTime = false;
 
             }
             else if(collectedObjectsCount == requiredObjectsCount) 
             {
-                Debug.Log(firstTime);
-                Debug.Log(collectedObjectsCount);
                 actualDialogue = dialogueLines3;
             }
             else
             {
-                Debug.Log(firstTime);
-                Debug.Log(collectedObjectsCount);
                 actualDialogue = dialogueLines2;                
             }           
         }

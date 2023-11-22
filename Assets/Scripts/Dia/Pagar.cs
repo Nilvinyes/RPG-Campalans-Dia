@@ -78,7 +78,6 @@ public class Pagar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
             Debug.Log("Se acabo");
         }
 
