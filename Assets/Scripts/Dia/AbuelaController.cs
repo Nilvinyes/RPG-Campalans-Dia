@@ -73,7 +73,7 @@ public class AbuelaController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.F)) //Gestionem els diàlegs
         {
             if (!didDialogueStart)
             {
@@ -91,7 +91,7 @@ public class AbuelaController : MonoBehaviour
         }
     }
 
-    private void StartDialogue()
+    private void StartDialogue() //que farà al iniciar els diàlegs
     {
 
         didDialogueStart = true;
@@ -104,7 +104,7 @@ public class AbuelaController : MonoBehaviour
         StartCoroutine(ShowLine());
     }
 
-    private void NextDialogue()
+    private void NextDialogue() //Si té més d'un diàleg 
     {
         linePosition++;
         if (linePosition < actualDialogue.Length)
@@ -122,7 +122,7 @@ public class AbuelaController : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowLine()
+    private IEnumerator ShowLine() //Fem servir una corrutina perque podem posar pauses, i axiì aconseguim que el missatge no sorti de cop
     {
         dialogueText.text = "";
 
