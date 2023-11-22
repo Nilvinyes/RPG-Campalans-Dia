@@ -22,6 +22,33 @@ public class Pagar : MonoBehaviour
     [SerializeField]
     private GameObject bananas;
 
+    [SerializeField]
+    private SpriteRenderer spriteBanana;
+
+    [SerializeField]
+    private TMP_Text monedes;
+
+    [SerializeField]
+    private GameObject textFinal;
+
+    private static Pagar instance;
+
+
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +75,13 @@ public class Pagar : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+            Debug.Log("Se acabo");
+        }
+
     }
 
     private void StartDialogue()
@@ -59,6 +93,7 @@ public class Pagar : MonoBehaviour
 
         PlayerController player = FindAnyObjectByType<PlayerController>();
         player.moveSpeed = 0;
+        monedes.text = "0";
 
         StartCoroutine(ShowLine());
     }
@@ -79,20 +114,25 @@ public class Pagar : MonoBehaviour
             player.moveSpeed = 5;
             StartCoroutine(Banana());
 
-
+            
         }
     }
 
     private IEnumerator Banana()
     {
-        bananas.SetActive(true);
+        spriteBanana.sortingOrder = 5;
         yield return new WaitForSeconds(1f);
         bananas.transform.position = new Vector3(bananas.transform.position.x,
                                                  bananas.transform.position.y - 0.7f,
                                                  bananas.transform.position.z);
         yield return new WaitForSeconds(2f);
 
-        bananas.SetActive(false);
+        spriteBanana.sortingOrder = 0;
+
+        yield return new WaitForSeconds(0.5f);
+
+        textFinal.SetActive(true);
+
     }
           
     private IEnumerator ShowLine()

@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class CameraDiaController : MonoBehaviour
 {
-    [SerializeField]
-    Transform targetbird;
+    private Transform target;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+        target = playerController.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(targetbird.position.x, //La camera es igual a la posicó del ocell
-                                         targetbird.position.y,
-                                         transform.position.z);
+        Vector3 posicioPlayer = new Vector3(target.position.x, target.position.y, transform.position.z);
+        transform.position = posicioPlayer;
     }
 }

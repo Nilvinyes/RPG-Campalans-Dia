@@ -48,8 +48,21 @@ public class AbuelaController : MonoBehaviour
     [SerializeField]
     private GameObject deteccioPlatan;
 
-    [SerializeField]
-    private GameObject coin;
+
+    private static AbuelaController instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -130,7 +143,6 @@ public class AbuelaController : MonoBehaviour
             panelMenjar.SetActive(false);
             monedes.text = "2";
             deteccioPlatan.SetActive(true);
-            StartCoroutine(Coin());
         }
         else if (!firstTime)
         {
@@ -139,12 +151,6 @@ public class AbuelaController : MonoBehaviour
         }
     }
 
-    private IEnumerator Coin()
-    {
-        coin.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        coin.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

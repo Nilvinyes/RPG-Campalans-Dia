@@ -19,9 +19,11 @@ public class ButtonController : MonoBehaviour
         //string lastArea = playerController.GetLastArea();
         //Debug.Log(lastArea);
         //SceneManager.LoadScene(lastArea);
+        //playerController.gameObject.SetActive(true);
         SceneManager.LoadScene(1);
-        playerController.gameObject.SetActive(true);
+        Time.timeScale = 1;
     }
+
 
     public void Restart()
     {

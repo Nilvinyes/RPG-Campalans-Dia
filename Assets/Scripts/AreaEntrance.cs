@@ -10,8 +10,7 @@ public class AreaEntrance : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //si té el mateix nom que el que guarda el Player, el teletransportem a aquest punt
-        if (areaJointPoint == PlayerController.instance.areaJointPoint){
-            Debug.Log("AreaEntrance:: Joint Point " + areaJointPoint + " Detected, setting Player position");
+        if (areaJointPoint == PlayerController.instance.areaJointPoint){            
             PlayerController.instance.transform.position = transform.position;
         }
 	}

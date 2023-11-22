@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
@@ -61,11 +62,14 @@ public class CartController : MonoBehaviour
 
     private bool timerZero = false;
 
+    private Vector3 posicioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
-        playerController.gameObject.SetActive(false);
+        posicioPlayer = playerController.gameObject.transform.position;
+        playerController.gameObject.transform.position = Vector3.right * 20;
 
         Time.timeScale = 0;
 
@@ -149,6 +153,7 @@ public class CartController : MonoBehaviour
 
         if (puntuacioTotal == total && !timerZero)   //Has acabat el joc (15 punts)
         {
+            playerController.gameObject.transform.position = posicioPlayer;
             Time.timeScale = 0;
             panelFinal.SetActive(true);
             panelMsgFinal.SetActive(true);

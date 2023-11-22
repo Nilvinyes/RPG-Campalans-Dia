@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using TMPro;
 using UnityEngine;
 
@@ -18,6 +19,21 @@ public class StartDetectionController : MonoBehaviour
 
     [SerializeField]
     private TMP_Text dialogueText;
+
+    private static StartDetectionController instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +91,8 @@ public class StartDetectionController : MonoBehaviour
 
             PlayerController player = FindAnyObjectByType<PlayerController>();
             player.moveSpeed = 5;
-            Destroy(gameObject);
+            BoxCollider2D collider = gameObject.GetComponent<BoxCollider2D>();
+            collider.enabled = false;
                        
         }
     }

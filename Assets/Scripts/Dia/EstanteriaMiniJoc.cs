@@ -21,9 +21,38 @@ public class EstanteriaMiniJoc : MonoBehaviour
 
     PlayerController player;
 
+    [SerializeField]
+    public string areaToLoad;
+
+    [SerializeField]
+    public string areaJointPoint;
+
+    [SerializeField]
+    private GameObject caixer;
+
+    public AreaEntrance entranceAssociatedToExit;
+
+    private static EstanteriaMiniJoc instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
+        entranceAssociatedToExit.areaJointPoint = areaJointPoint;
+
         player = FindAnyObjectByType<PlayerController>();
         player.moveSpeed = 5;
 
@@ -78,12 +107,15 @@ public class EstanteriaMiniJoc : MonoBehaviour
 
             
             player.moveSpeed = 5;
-
+            caixer.SetActive(true);
             //guardem al jugador el punt on el voldrem posar
             //player.SetLastArea(SceneManager.GetActiveScene().name);
 
             //carreguem l'escena
-            SceneManager.LoadScene(2);
+            PlayerController.instance.areaJointPoint = areaJointPoint;
+            PlayerController.instance.SetLastArea(SceneManager.GetActiveScene().name);
+            //carreguem l'escena
+            SceneManager.LoadScene(areaToLoad);
 
         }
     }

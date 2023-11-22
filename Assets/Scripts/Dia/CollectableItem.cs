@@ -88,9 +88,9 @@ public class CollectableItem : MonoBehaviour
 
             PlayerController player = FindAnyObjectByType<PlayerController>();
             player.moveSpeed = 5;
-
             AlimentRecollit();
-            Destroy(gameObject);
+            BoxCollider2D collider = gameObject.GetComponent<BoxCollider2D>();
+            collider.enabled = false;
         }
     }
 

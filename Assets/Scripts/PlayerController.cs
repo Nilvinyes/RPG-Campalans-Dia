@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        Time.timeScale = 1;
+        
         //si no existeix el PlayerController
         if (instance == null)
         {
